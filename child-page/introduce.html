@@ -9,7 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../asset/css/base.css">
     <link rel="stylesheet" href="../asset/css/style.css">
-    <link rel="stylesheet" href="../asset/css/order.css">
+    <link rel="stylesheet" href="../asset/css/introduce.css">
 
     <title>Web Shoe</title>
     <link rel="icon" href="../asset/img/title.png">
@@ -59,79 +59,61 @@
         </div>
     </header>
 
-    <!-- Phần menu và thanh toán -->
-    <section class="order-section">
-        <div id="menu-items-box" class="box-scroll">
-            <div class="container">
-                <ul>
-                    <li><a href="#menu-items">Boots</a></li>
-                    <li><a href="#caogot-items">Cao gót</a></li>
-                    <li><a href="#sport-items">Thể thao</a></li>
-                    <li><a href="#dego-items">Đế gỗ</a></li>
-                    <li><a href="#debet-items">Đế bệt</a></li>
-                    <li><a href="#bupbe-items">Giày búp bê</a></li>
-                    <li><a href="#sneaker-items">Sneaker</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="menu-box">
-            <h2 class="section-title" id="boots">Boots</h2>
-            <div id="menu-items"></div>
-
-            <h2 class="section-title" id="caogot">Cao gót</h2>
-            <div id="caogot-items"></div>
-
-            <h2 class="section-title" id="thethao">Thể thao</h2>
-            <div id="sport-items"></div>
-
-            <h2 class="section-title" id="dego">Đế gỗ</h2>
-            <div id="dego-items"></div>
-
-            <h2 class="section-title" id="debet">Đế bệt</h2>
-            <div id="debet-items"></div>
-
-            <h2 class="section-title" id="bupbe">Giày búp bê</h2>
-            <div id="bupbe-items"></div>
-
-            <h2 class="section-title" id="sneaker">Sneaker</h2>
-            <div id="sneaker-items"></div>
+    <div class="description">
+        <div class="title">
+            <img src="../asset/img/introduce.png" alt="">
+            <h2>Giới thiệu</h2>
         </div>
 
-
-        <!-- Box bên phải: Thanh toán -->
-        <div class="checkout-box">
-            <h3 class="section-title">Thanh Toán</h3>
-            <div id="order-summary">
-                <p>Không có sản phẩm nào.</p>
-            </div>
-            <button id="checkout-btn" class="btn-checkout">Thanh Toán</button>
+        <div class="text-des">
+            <h3>Chào mừng đến với tiệm giày 3 thành viên</h3>
+            <p>
+                Tiệm giày 3 thành viên của chúng tôi luôn đảm bảo về mặt chất lượng<br>
+                kèm nhiều chương trình khuyến mãi hấp dẫn <br> 
+                <br>
+                Chúng tôi xin đảm bảo!<br>
+                <br>
+                - Chất lượng sản phẩm đảm bảo. <br>
+                - Nếu có khiếu nại hãy liên hệ với Fouder Nguyễn Xuân Bình để anh ấy xử phạt 2 Staff Thanh và Vinh vì chậm trễ. <br>
+                - Đảm bảo quyền lợi khách hàng <br>
+                - Không áp dụng trong điều kiện thời tiết bất thường hoặc không an toàn như mưa lớn, lũ lụt, giông bão,
+                thủy triều ... <br>
+                - Không áp dụng vào các ngày lễ. <br>
+                <br>
+                * Chỉ áp dụng với các khu vực chỉ định
+            </p>
         </div>
-    </section>
 
-    <!-- Box thông báo thanh toán -->
-    <div id="payment-notification" class="payment-notification">
-        <div class="payment-content">
-            <h2>Thanh toán!</h2>
-            <div id="order-items-list" class="list-order"></div>
-            <div id="qr-code-container-bottom">
-                <img src="../asset/img/qr-thanh-toan.jpg" alt="QR Code 2" class="qr-code">
+        <div class="main">
+            <div class="img">
+                <div class="left">
+                    <img src="../asset/img/fouder.jpg" alt="">
+                </div>
+                <div class="right">
+                    <p>Nguyễn Xuân Bình</p>
+                    <i>Fouder</i>
+                </div>
             </div>
-            <button id="complete-btn" class="complete-btn">Hoàn thành</button>
+            <div class="img">
+                <div class="left">
+                    <img src="../asset/img/staff-1.jpg" alt="">
+                </div>
+                <div class="right">
+                    <p>Ngân Thị Phương Thanh</p>
+                    <i>Staff</i>
+                </div>
+            </div>
+            <div class="img">
+                <div class="left">
+                    <img src="../asset/img/staff-2.jpg" alt="">
+                </div>
+                <div class="right">
+                    <p>Nguyễn Văn Vinh</p>
+                    <i>Staff</i>
+                </div>
+            </div>
         </div>
     </div>
-
-    <!-- Hộp thông báo giỏ hàng trống -->
-    <div id="empty-cart-notification" class="empty-cart-notification">
-        <div class="notification-content">
-            <h2>Giỏ hàng trống!</h2>
-            <p>Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán.</p>
-            <button id="close-empty-cart-btn">Đóng</button>
-        </div>
-    </div>
-
-    <script src="../asset/js/scroll.js"></script>
-    <script src="../asset/js/order.js"></script>
 
     <!-- Thông tin -->
     <section class="information">
@@ -175,7 +157,7 @@
 
             <div class="list-1 infor-four">
                 <p>Đăng ký nhận thông tin</p>
-                <p>Gửi email đăng ký để nhận thông báo mới nhất về khuyến mãi,
+                <p>Gửi email đăng ký để nhận thông báo mới nhất về khuyến mãi, 
                     sự kiện nổi bật dành cho khách hàng.
                 </p>
                 <form action="">
