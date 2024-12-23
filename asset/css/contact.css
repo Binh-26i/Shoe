@@ -1,0 +1,44 @@
+.map {
+    margin-top: 50px;
+}
+
+.map .container iframe {
+    width: 100%;
+}
+
+.infor .container {
+    display: flex;
+    margin-top: 50px;
+}
+
+.infor .container h2 {
+    margin-bottom: 50px;
+}
+
+.infor .container .infor-left {
+    width: 50%;
+}
+
+.infor .container .infor-left p {
+    margin-bottom: 20px;
+}
+
+.infor .container .infor-left p span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.infor .container .infor-right form input, textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.infor .container .infor-right form button {
+    border: none;
+    padding: 10px;
+    background-color: var(--color-hover);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+}

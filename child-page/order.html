@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../asset/css/base.css">
+    <link rel="stylesheet" href="../asset/css/style.css">
+    <link rel="stylesheet" href="../asset/css/order.css">
+
+    <title>Web Shoe</title>
+    <link rel="icon" href="../asset/img/title.png">
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html">
+            <img src="../asset/img/logo.png" alt="">
+        </a>
+        <div class="menu">
+            <ul>
+                <a href="../index.html">
+                    <li>Trang chủ</li>
+                </a>
+
+                <a href="order.html">
+                    <li>Sản phẩm</li>
+                </a>
+
+                <a href="">
+                    <li>Blog</li>
+                </a>
+
+                <a href="contact.html">
+                    <li>Liên hệ</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="icon">
+            <a href="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
+            <a href="login.html">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+            <a href="order.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Phần menu và thanh toán -->
+    <section class="order-section">
+        <div id="menu-items-box" class="box-scroll">
+            <div class="container">
+                <ul>
+                    <li><a href="#menu-items">Boots</a></li>
+                    <li><a href="#caogot-items">Cao gót</a></li>
+                    <li><a href="#sport-items">Thể thao</a></li>
+                    <li><a href="#dego-items">Đế gỗ</a></li>
+                    <li><a href="#debet-items">Đế bệt</a></li>
+                    <li><a href="#bupbe-items">Giày búp bê</a></li>
+                    <li><a href="#sneaker-items">Sneaker</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="menu-box">
+            <h2 class="section-title" id="boots">Boots</h2>
+            <div id="menu-items"></div>
+
+            <h2 class="section-title" id="caogot">Cao gót</h2>
+            <div id="caogot-items"></div>
+
+            <h2 class="section-title" id="thethao">Thể thao</h2>
+            <div id="sport-items"></div>
+
+            <h2 class="section-title" id="dego">Đế gỗ</h2>
+            <div id="dego-items"></div>
+
+            <h2 class="section-title" id="debet">Đế bệt</h2>
+            <div id="debet-items"></div>
+
+            <h2 class="section-title" id="bupbe">Giày búp bê</h2>
+            <div id="bupbe-items"></div>
+
+            <h2 class="section-title" id="sneaker">Sneaker</h2>
+            <div id="sneaker-items"></div>
+        </div>
+
+
+        <!-- Box bên phải: Thanh toán -->
+        <div class="checkout-box">
+            <h3 class="section-title">Thanh Toán</h3>
+            <div id="order-summary">
+                <p>Không có sản phẩm nào.</p>
+            </div>
+            <button id="checkout-btn" class="btn-checkout">Thanh Toán</button>
+        </div>
+    </section>
+
+    <!-- Box thông báo thanh toán -->
+    <div id="payment-notification" class="payment-notification">
+        <div class="payment-content">
+            <h2>Thanh toán!</h2>
+            <div id="order-items-list" class="list-order"></div>
+            <div id="qr-code-container">
+                <img src="https://via.placeholder.com/150" alt="QR Code 1" class="qr-code">
+            </div>
+            <div id="qr-code-container-bottom">
+                <img src="../asset/img/qr-thanh-toan.jpg" alt="QR Code 2" class="qr-code">
+            </div>
+            <button id="complete-btn" class="complete-btn">Hoàn thành</button>
+        </div>
+    </div>
+
+    <!-- Hộp thông báo giỏ hàng trống -->
+    <div id="empty-cart-notification" class="empty-cart-notification">
+        <div class="notification-content">
+            <h2>Giỏ hàng trống!</h2>
+            <p>Vui lòng thêm sản phẩm vào giỏ hàng trước khi thanh toán.</p>
+            <button id="close-empty-cart-btn">Đóng</button>
+        </div>
+    </div>
+
+    <script src="../asset/js/scroll.js"></script>
+    <script src="../asset/js/order.js"></script>
+
+    <!-- Thông tin -->
+    <section class="information">
+        <div class="container">
+            <div class="list-1 infor-one">
+                <p>THÔNG TIN LIÊN HỆ</p>
+                <p>Công ty cổ phần 3 thành viên với Leader là Nguyễn Xuân Bình cùng hai
+                    Staff là Nguyễn Văn Vinh và Ngân Thi Phương Thanh luôn mang đến cho
+                    khách hàng trải nghiệm tốt nhất, hưởng dịch vụ tốt nhất và chúng tôi
+                    có, luôn luôn đặt lợi ích khách hàng lên hàng đầu
+                </p>
+                <div class="item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Địa chỉ: 26 Nguyễn Thái Học, TP.Vinh, Nghệ An</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Hotline: 18000081</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email: congty3thanhvien@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="list-1 infor-two">
+                <p>CHÍNH SÁCH</p>
+                <a href="">Hướng dẫn mua hàng</a> <br>
+                <a href="">Chính sách thanh toán</a> <br>
+                <a href="">Chính sách bảo hành</a> <br>
+                <a href="">Chính sách vận chuyển</a>
+            </div>
+
+            <div class="list-1 infor-three">
+                <p>THÔNG TIN</p>
+                <a href="">Về chúng tôi</a> <br>
+                <a href="">Câu hỏi thường gặp</a> <br>
+                <a href="">Tin tức</a> <br>
+                <a href="">Liên hệ</a>
+            </div>
+
+            <div class="list-1 infor-four">
+                <p>Đăng ký nhận thông tin</p>
+                <p>Gửi email đăng ký để nhận thông báo mới nhất về khuyến mãi,
+                    sự kiện nổi bật dành cho khách hàng.
+                </p>
+                <form action="">
+                    <input type="email" placeholder="Nhập email">
+                    <button type="submit">Đăng ký</button>
+                </form>
+                <img src="asset/img/payment-footer.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <i>Copyright © 2024 Group 1</i>
+    </footer>
+</body>
+
+</html>

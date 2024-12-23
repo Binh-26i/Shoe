@@ -1,0 +1,22 @@
+:root {
+    --color-main: #FFFFFF;
+    --color-items: #F7F7F7;
+    --color-hover: #FF2A2D;
+    --color-price: #FF2A2D;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    margin: auto;
+}

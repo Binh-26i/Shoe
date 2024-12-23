@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="asset/css/base.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+
+    <title>Web Shoe</title>
+    <link rel="icon" href="asset/img/title.png">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="asset/img/logo.png" alt="">
+        </a>
+        <div class="menu">
+            <ul>
+                <a href="index.html">
+                    <li>Trang chủ</li>
+                </a>
+
+                <a href="child-page/order.html">
+                    <li>Sản phẩm</li>
+                </a>
+
+                <a href="">
+                    <li>Blog</li>
+                </a>
+
+                <a href="child-page/contact.html">
+                    <li>Liên hệ</li>
+                </a>
+            </ul>
+        </div>
+
+        <div class="icon">
+            <a href="">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+
+            <a href="child-page/login.html">
+                <i class="fa-solid fa-user"></i>
+            </a>
+
+            <a href="child-page/order.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Slide -->
+    <section class="slide">
+        <div class="list">
+            <div class="item">
+                <img src="asset/img/slide-1.jpg" alt="" title="banner">
+            </div>
+            <div class="item">
+                <img src="asset/img/slide-2.jpg" alt="" title="banner">
+            </div>
+            <div class="item">
+                <img src="asset/img/slide-3.jpg" alt="" title="banner">
+            </div>
+            <div class="item">
+                <img src="asset/img/slide-4.jpg" alt="" title="banner">
+            </div>
+        </div>
+
+        <!-- button -->
+        <div class="buttons">
+            <button id="pre"> < </button>
+            <button id="next">></button>
+        </div>
+
+        <!-- dots -->
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+    <!-- script slide -->
+    <script src="asset/js/slide.js"></script>
+
+    <!-- Collection -->
+<section class="collection">
+    <div class="container">
+        <div class="item" data-category="all">
+            <a href="#" data-product-id="1">
+                <img src="asset/img/bo-suu-tap.jpg" alt="">
+                <p>Bộ sưu tập</p>
+            </a>
+        </div>
+        <div class="item" data-category="boots">
+            <a href="#" data-product-id="2">
+                <img src="asset/img/boots.jpg" alt="">
+                <p>Boots</p>
+            </a>
+        </div>
+        <div class="item" data-category="heels">
+            <a href="#" data-product-id="3">
+                <img src="asset/img/cao-got.jpg" alt="">
+                <p>Cao gót</p>
+            </a>
+        </div>
+        <div class="item" data-category="sports">
+            <a href="#" data-product-id="4">
+                <img src="asset/img/the-thao.jpg" alt="">
+                <p>Thể thao</p>
+            </a>
+        </div>
+        <div class="item" data-category="wooden">
+            <a href="#" data-product-id="5">
+                <img src="asset/img/de-go.jpg" alt="">
+                <p>Đế gỗ</p>
+            </a>
+        </div>
+        <div class="item" data-category="flat">
+            <a href="#" data-product-id="6">
+                <img src="asset/img/de-bet.jpg" alt="">
+                <p>Đế bệt</p>
+            </a>
+        </div>
+        <div class="item" data-category="ballet">
+            <a href="#" data-product-id="7">
+                <img src="asset/img/giay-bup-be.jpg" alt="">
+                <p>Giày búp bê</p>
+            </a>
+        </div>
+        <div class="item" data-category="sneakers">
+            <a href="#" data-product-id="8">
+                <img src="asset/img/sneaker.jpg" alt="">
+                <p>Sneaker</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Sản phẩm bán chạy -->
+    <section class="section-one">
+        <div class="container">
+            <div class="text">
+                <h2># Sản phẩm bán chạy</h2>
+                <p>Top những sản phẩm được mua nhiều nhất</p>
+            </div>
+
+            <div class="product-section" id="bestseller-products">
+                <!-- Sản phẩm sẽ được inject ở đây -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Script JS -->
+    <script src="asset/js/products.js"></script>
+    <!-- <script src="asset/js/render.js"></script> -->
+    
+    
+
+    <div class="banner">
+        <div class="container">
+            <img src="asset/img/slide-3.jpg" alt="">
+        </div>
+    </div>
+
+    <!-- Sản phẩm mới về -->
+    <section class="section-two">
+        <div class="container">
+            <div class="text">
+                <h2># Sản phẩm mới về</h2>
+                <p>Những sản phẩm mới nhất được shop nhập về phục vụ tín đồ</p>
+            </div>
+            <div class="product-grid">
+                <div class="item">
+                    <img src="asset/img/sp-10.jfif" alt="">
+                    <p>Giày Thể Thao Adidas Runner</p>
+                    <p>1.000.000 đ</p>
+                </div>
+                <div class="item">
+                    <img src="asset/img/sp-1.jfif" alt="">
+                    <p>Giày Thể Thao Adidas</p>
+                    <p>1.000.000 đ</p>
+                </div>
+                <div class="item">
+                    <img src="asset/img/bb-2.jfif" alt="">
+                    <p>Giày Búp Bê Dễ Thương</p>
+                    <p>200.000 đ</p>
+                </div>
+                <div class="item">
+                    <img src="asset/img/db-2.jfif" alt="">
+                    <p>Giày Đế Bệt</p>
+                    <p>500.000 đ</p>
+                </div>
+                <div class="item">
+                    <img src="asset/img/cg-3.jfif" alt="">
+                    <p>Giày Cao Gót</p>
+                    <p>2.000.000 đ</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Tin mới nhất -->
+    <section class="news">
+        <div class="container">
+            <div class="text">
+                <h2># Tin mới nhất</h2>
+                <p>Nơi cập nhật những xu hướng thời trang mới nhất cho bạn</p>
+            </div>
+
+            <div class="display-img">
+                <div class="left">
+                    <img src="asset/img/news-1.jpg" alt=""> <br>
+                    <b>Giới trẻ Việt rộ mốt đi dép cá rô phi</b>
+                    <p>
+                        22 Tháng Mười, 2019 <br> <br>
+                        Trào lưu của giới trẻ thường bất ngờ xuất hiện mà chẳng cần lý do. Một bài hát,
+                        một câu nói, thậm chí một chiếc áo… cũng có thể trở thành xu hướng. Mới đây, ảnh chụp đôi dép
+                        nhựa màu xanh, [...]
+                    </p>
+                </div>
+
+                <div class="right">
+                    <div class="top">
+                        <div class="item-top-left">
+                            <img src="asset/img/news-2.jpg" alt=""> <br>
+                            <b>Chọn giày dép lúc nào cũng vừa in chân</b>
+                            <p>22 Tháng Mười, 2019 </p>
+                        </div>
+                        <div class="item-top-right">
+                            <img src="asset/img/news-3.jpg" alt=""> <br>
+                            <b>Thêm 5 đôi sneaker màu ngọt lịm</b>
+                            <p>22 Tháng Mười, 2019</p>
+                        </div>
+                    </div>
+                    <div class="top">
+                        <div class="item-top-left">
+                            <img src="asset/img/news-4.jpg" alt=""> <br>
+                            <b>Dép Puma Fenty mẫu mới nhất của <br> Rihanna</b>
+                            <p>22 Tháng Mười, 2019 </p>
+                        </div>
+                        <div class="item-top-right">
+                            <img src="asset/img/news-5.jpg" alt=""> <br>
+                            <b>Thêm 5 đôi sneaker màu ngọt lịm</b>
+                            <p>22 Tháng Mười, 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Thương hiệu nổi tiếng -->
+    <section class="section-three">
+        <div class="container">
+            <div class="text">
+                <h2># Thương hiệu nổi tiếng</h2>
+                <p>Những sản phẩm mới nhất được shop nhập về phục vụ tín đồ</p>
+            </div>
+
+            <div class="img">
+                <img src="asset/img/TH-1.png" alt="">
+                <img src="asset/img/TH-2.png" alt="">
+                <img src="asset/img/TH-3.png" alt="">
+                <img src="asset/img/TH-4.png" alt="">
+                <img src="asset/img/TH-5.png" alt="">
+                <img src="asset/img/TH-6.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- Thông tin -->
+    <section class="information">
+        <div class="container">
+            <div class="list-1 infor-one">
+                <p>THÔNG TIN LIÊN HỆ</p>
+                <p>Công ty cổ phần 3 thành viên với Leader là Nguyễn Xuân Bình cùng hai
+                    Staff là Nguyễn Văn Vinh và Ngân Thi Phương Thanh luôn mang đến cho
+                    khách hàng trải nghiệm tốt nhất, hưởng dịch vụ tốt nhất và chúng tôi
+                    có, luôn luôn đặt lợi ích khách hàng lên hàng đầu
+                </p>
+                <div class="item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Địa chỉ: 26 Nguyễn Thái Học, TP.Vinh, Nghệ An</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-phone"></i>
+                    <p>Hotline: 18000081</p>
+                </div>
+                <div class="item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email: congty3thanhvien@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="list-1 infor-two">
+                <p>CHÍNH SÁCH</p>
+                <a href="">Hướng dẫn mua hàng</a> <br>
+                <a href="">Chính sách thanh toán</a> <br>
+                <a href="">Chính sách bảo hành</a> <br>
+                <a href="">Chính sách vận chuyển</a>
+            </div>
+
+            <div class="list-1 infor-three">
+                <p>THÔNG TIN</p>
+                <a href="">Về chúng tôi</a> <br>
+                <a href="">Câu hỏi thường gặp</a> <br>
+                <a href="">Tin tức</a> <br>
+                <a href="">Liên hệ</a>
+            </div>
+
+            <div class="list-1 infor-four">
+                <p>Đăng ký nhận thông tin</p>
+                <p>Gửi email đăng ký để nhận thông báo mới nhất về khuyến mãi, 
+                    sự kiện nổi bật dành cho khách hàng.
+                </p>
+                <form action="">
+                    <input type="email" placeholder="Nhập email">
+                    <button type="submit">Đăng ký</button>
+                </form>
+                <img src="asset/img/payment-footer.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <i>Copyright © 2024 Group 1</i>
+    </footer>
+
+    <!-- effect snow -->
+    <section class="snowflake">
+        <canvas id="snowCanvas"></canvas>
+    </section>
+
+    <!-- script effect snow -->
+    <script src="asset/js/snow.js"></script>
+</body>
+
+</html>
