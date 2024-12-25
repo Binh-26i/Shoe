@@ -437,8 +437,8 @@
 /* end snow effect */
 
 /* responsive */
-/* Responsive cho màn hình nhỏ hơn 320px (điện thoại di động, hiển thị chiều dọc) */
-@media (max-width: 320px) {
+/* Responsive cho màn hình nhỏ hơn 768px (mobile) */
+@media (max-width: 767px) {
     .header {
         flex-direction: column;
         height: auto;
@@ -473,14 +473,23 @@
         align-items: center;
     }
 
-    .section-two .container .product-grid .item { width: 100%; margin-bottom: 20px; }
+    .section-two .container .product-grid .item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-two .container .product-grid .item img {
+        width: 100%;
+        height: auto;
+    }
 
     .news .container .display-img {
         flex-direction: column;
         align-items: center;
     }
 
-    .news .container .display-img .left, .news .container .display-img .right {
+    .news .container .display-img .left, 
+    .news .container .display-img .right {
         width: 100%;
     }
 
@@ -490,8 +499,8 @@
     }
 }
 
-/* Responsive cho màn hình nhỏ hơn 600px (máy tính bảng, hiển thị chiều dọc) */
-@media (max-width: 600px) {
+/* Responsive cho màn hình từ 768px đến 1024px (tablet) */
+@media (min-width: 768px) and (max-width: 1024px) {
     .header {
         flex-direction: column;
         height: auto;
@@ -521,14 +530,19 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .section-two .container .product-grid { 
-        flex-direction: column; align-items: center; 
-    } 
-    .section-two .container .product-grid .item { 
-        width: 90%; margin-bottom: 20px; 
-    } 
-    .section-two .container .product-grid .item img { 
-        width: 100%; height: auto; 
+    .section-two .container .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-two .container .product-grid .item {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+
+    .section-two .container .product-grid .item img {
+        width: 100%;
+        height: auto;
     }
 
     .news .container .display-img {
@@ -536,7 +550,8 @@
         align-items: center;
     }
 
-    .news .container .display-img .left, .news .container .display-img .right {
+    .news .container .display-img .left, 
+    .news .container .display-img .right {
         width: 100%;
     }
 
@@ -546,22 +561,22 @@
     }
 }
 
-/* Responsive cho màn hình nhỏ hơn 768px (máy tính bảng loại to, hiển thị chiều dọc) */
-@media (max-width: 768px) {
+/* Responsive cho màn hình từ 1024px đến 1440px (laptop) */
+@media (min-width: 1024px) and (max-width: 1440px) {
     .header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+        flex-direction: row;
+        height: 100px;
+        padding: 0 100px;
     }
 
     .header .menu ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         padding: 0;
     }
 
     .header .menu ul a {
-        margin: 10px 0;
+        margin-left: 30px;
     }
 
     .slide {
@@ -569,37 +584,113 @@
     }
 
     .collection .container {
-        flex-direction: column;
-        padding: 10px;
+        flex-direction: row;
+        padding: 15px 50px;
     }
 
     .product-section {
         grid-template-columns: repeat(3, 1fr);
-    }   
+    }
 
-    .section-two .container .product-grid .item { 
-        width: calc(100% / 2 - 10px); margin-bottom: 20px; 
-    } 
-    .section-two .container .product-grid .item img { 
-        width: 100%; height: auto; 
+    .section-two .container .product-grid {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .section-two .container .product-grid .item {
+        width: calc(100% / 3 - 10px);
+        margin-bottom: 20px;
+    }
+
+    .section-two .container .product-grid .item img {
+        width: 100%;
+        height: auto;
     }
 
     .news .container .display-img {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
     }
 
-    .news .container .display-img .left, .news .container .display-img .right {
-        width: 100%;
+    .news .container .display-img .left, 
+    .news .container .display-img .right {
+        width: 48%;
     }
 
     .information .container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .information .container .list-1 {
+        width: calc(100% / 3 - 20px);
+        padding: 20px;
     }
 }
 
-/* Responsive cho màn hình từ 1025px trở lên (desktop thông thường) */
-@media (min-width: 1025px) {
-    /* Bạn có thể điều chỉnh kích thước các phần tử cho desktop nếu cần */
+/* Responsive cho màn hình lớn hơn 1440px (desktop) */
+@media (min-width: 1441px) {
+    .header {
+        flex-direction: row;
+        height: 100px;
+        padding: 0 150px;
+    }
+
+    .header .menu ul {
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+    }
+
+    .header .menu ul a {
+        margin-left: 30px;
+    }
+
+    .slide {
+        height: 600px;
+    }
+
+    .collection .container {
+        flex-direction: row;
+        padding: 15px 50px;
+    }
+
+    .product-section {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .section-two .container .product-grid {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .section-two .container .product-grid .item {
+        width: calc(100% / 5 - 10px);
+        margin-bottom: 20px;
+    }
+
+    .section-two .container .product-grid .item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .news .container .display-img {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .news .container .display-img .left, 
+    .news .container .display-img .right {
+        width: 48%;
+    }
+
+    .information .container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .information .container .list-1 {
+        width: calc(100% / 3 - 20px);
+        padding: 20px;
+    }
 }
