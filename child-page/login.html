@@ -16,173 +16,58 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="../index.html">
-            <img src="../asset/img/logo.png" alt="">
-        </a>
-        <div class="menu">
-            <ul>
-                <a href="../index.html">
-                    <li>Trang chủ</li>
-                </a>
-
-                <a href="order.html">
-                    <li>Chi tiết sản phẩm</li>
-                </a>
-
-                <a href="">
-                    <li>Blog</li>
-                </a>
-
-                <a href="introduce.html">
-                    <li>Giới thiệu</li>
-                </a>
-
-                <a href="contact.html">
-                    <li>Liên hệ</li>
-                </a>
-            </ul>
+    <div class="newUser">
+        <div class="overlay">
+            <img src="../asset/img/bg-login-new.jpg" alt="">
         </div>
 
-        <div class="icon">
-            <a href="">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-
-            <a href="login.html">
-                <i class="fa-solid fa-user"></i>
-            </a>
-
-            <a href="order.html">
-                <i class="fa-solid fa-cart-shopping"></i>
-            </a>
-        </div>
-    </header>
-
-    <div class="information">
-        <div class="container">
-            <div class="infor-left">
-                <h2>Tài khoản</h2>
-                <p>Đăng nhập tài khoản ở đây</p>
+        <div class="input">
+            <div class="login">
+                <h2>Đăng nhập </h2>
                 <form id="loginForm">
-                    <input type="text" name="" id="loginUsername" placeholder="Tên tài khoản"> <br>
-                    <input type="password" name="" id="loginPassword" placeholder="Mật khẩu"> <br>
-                    <a href="javascript:void(0)">
-                        <button type="submit">Đăng nhập</button>
-                    </a>
+                    <input type="text" id="loginUsername" placeholder="Name User"> <br>
+                    <input type="password" id="loginPassword" placeholder="Password"> <br>
+                    <a href="">Forgot Password</a> <br>
+                    <button type="submit">Đăng nhập</button>
                 </form>
-                <p>If you forgot your password just enter your email and click <a href="">here</a></p>
             </div>
-            <div class="infor-right">
-                <h2>Đăng ký tài khoản mới</h2>
+
+            <div class="register">
+                <h2>Tạo tài khoản mới</h2>
                 <form id="registerForm">
-                    <label for="fullName">Họ tên</label>
-                    <input type="text" name="" id="fullName"> <br>
-    
-                    <label for="PassWord">Mật khẩu</label>
-                    <input type="password" name="" id="PassWord"> <br>
-    
-                    <label for="address">Địa chỉ</label>
-                    <input type="text" name="" id="address"> <br>
-    
-                    <label for="PhoneNumber">Số điện thoại</label>
-                    <input type="number" name="" id="PhoneNumber"> <br>
-    
-                    <a href="javascript:void(0)">
-                        <button type="submit">Đăng ký</button>
-                    </a>
-                </form>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Thông báo trung tâm -->
-    <div id="notification" class="notification">
-        <p id="notificationText"></p>
-        <button id="notificationButton">OK</button>
-    </div>
-    
-    <script src="../asset/js/button-login.js"></script>
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName"> <br>
 
-    <!-- Thương hiệu nổi tiếng -->
-    <section class="section-three">
-        <div class="container">
-            <div class="text">
-                <h2># Thương hiệu nổi tiếng</h2>
-                <p>Những sản phẩm mới nhất được shop nhập về phục vụ tín đồ</p>
-            </div>
+                    <label for="Password">Password</label>
+                    <input type="password" id="Password"> <br>
 
-            <div class="img">
-                <img src="../asset/img/TH-1.png" alt="">
-                <img src="../asset/img/TH-2.png" alt="">
-                <img src="../asset/img/TH-3.png" alt="">
-                <img src="../asset/img/TH-4.png" alt="">
-                <img src="../asset/img/TH-5.png" alt="">
-                <img src="../asset/img/TH-6.png" alt="">
-            </div>
-        </div>
-    </section>
+                    <label for="address">Address</label>
+                    <input type="tel" id="address"> <br>
 
-    <script src="../asset/js/login.js"></script>
+                    <label for="PhoneNumber">Phone Number</label>
+                    <input type="number" id="PhoneNumber"> <br>
 
-    <!-- Thông tin -->
-    <section class="information">
-        <div class="container">
-            <div class="list-1 infor-one">
-                <p>THÔNG TIN LIÊN HỆ</p>
-                <p>Công ty cổ phần 3 thành viên với Leader là Nguyễn Xuân Bình cùng hai
-                    Staff là Nguyễn Văn Vinh và Ngân Thi Phương Thanh luôn mang đến cho
-                    khách hàng trải nghiệm tốt nhất, hưởng dịch vụ tốt nhất và chúng tôi
-                    có, luôn luôn đặt lợi ích khách hàng lên hàng đầu
-                </p>
-                <div class="item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Địa chỉ: 26 Nguyễn Thái Học, TP.Vinh, Nghệ An</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>Hotline: 18000081</p>
-                </div>
-                <div class="item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>Email: congty3thanhvien@gmail.com</p>
-                </div>
-            </div>
+                    <label for="agree">Bạn đồng ý với các điều khoản của chúng tôi</label>
+                    <input type="checkbox" id="agree" class="chk"> <br>
 
-            <div class="list-1 infor-two">
-                <p>CHÍNH SÁCH</p>
-                <a href="">Hướng dẫn mua hàng</a> <br>
-                <a href="">Chính sách thanh toán</a> <br>
-                <a href="">Chính sách bảo hành</a> <br>
-                <a href="">Chính sách vận chuyển</a>
-            </div>
-
-            <div class="list-1 infor-three">
-                <p>THÔNG TIN</p>
-                <a href="">Về chúng tôi</a> <br>
-                <a href="">Câu hỏi thường gặp</a> <br>
-                <a href="">Tin tức</a> <br>
-                <a href="">Liên hệ</a>
-            </div>
-
-            <div class="list-1 infor-four">
-                <p>Đăng ký nhận thông tin</p>
-                <p>Gửi email đăng ký để nhận thông báo mới nhất về khuyến mãi,
-                    sự kiện nổi bật dành cho khách hàng.
-                </p>
-                <form action="">
-                    <input type="email" placeholder="Nhập email">
                     <button type="submit">Đăng ký</button>
                 </form>
-                <img src="asset/img/payment-footer.png" alt="">
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- footer -->
-    <footer class="footer">
-        <i>Copyright © 2024 Group 1</i>
-    </footer>
+    <!-- Container thông báo -->
+    <div id="notification" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000; color: #fff; padding: 20px 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 10000;">
+        <p id="notificationText"></p>
+        <button id="notificationButton" style="margin-top: 10px; padding: 5px 15px; background: #fff; color: #000; border: none; border-radius: 5px; cursor: pointer;">OK</button>
+    </div>
+
+    <div id="notification" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000; color: #fff; padding: 20px 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 10000;">
+        <p id="notificationText"></p>
+        <button id="notificationButton" style="margin-top: 10px; padding: 5px 15px; background: #fff; color: #000; border: none; border-radius: 5px; cursor: pointer;">OK</button>
+    </div>
+    
+    <script src="../asset/js/login.js"></script>
 </body>
 
 </html>

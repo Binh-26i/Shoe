@@ -258,7 +258,7 @@
 }
 
 .section-two .container .product-grid .item p {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .section-two .container .product-grid .item {
@@ -269,6 +269,15 @@
     transform: scale(1.1);
 }
 /* end Sản phẩm mới về */
+
+/* video */
+.container video {
+    margin-top: 100px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+/* end video */
 
 /* Tin mới nhất */
 .news .container .text {
@@ -314,9 +323,17 @@
     margin-right: 40px;
 }
 
+.news .container .display-img .right .top .item-top-left {
+    margin-right: 20px;
+}
+
 .news .container .display-img .right .top .item-top-left b, p{
     font-size: 15px;
     margin: 0;
+}
+
+.news .container .display-img .right .top .item-top-left:hover, .item-top-right:hover {
+    color: var(--color-hover);
 }
 /* end Tin mới nhất */
 
@@ -415,26 +432,6 @@
     align-items: center;
 }
 /* end footer */
-
-/* snow effect */
-.snowflake {
-    position: fixed;
-    top: -10px;
-    z-index: 9999;
-    color: rgb(230, 133, 15);
-    user-select: none;
-    pointer-events: none;
-    font-size: 1em;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    to {
-        transform: translateY(100vh);
-    }
-}
-
-/* end snow effect */
 
 /* responsive */
 /* Responsive cho màn hình nhỏ hơn 768px (mobile) */

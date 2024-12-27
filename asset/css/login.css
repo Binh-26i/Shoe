@@ -1,213 +1,109 @@
-body {
-    background-color: var(--color-bg-section);
-}
-.information {
-    margin-top: 80px;
-    margin-bottom: 80px;
+/* Căn chỉnh container chính */
+.newUser {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Đặt chiều cao 100% màn hình */
+    overflow: hidden;
 }
 
-.information .container {
+/* Lớp phủ và ảnh nền */
+.newUser .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Màu tối với độ trong suốt */
+    z-index: 1;
+}
+
+.newUser .overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh phủ toàn màn hình */
+}
+
+/* Phần nội dung (input) */
+.newUser .input {
+    position: absolute;
+    top: 46%; /* Căn giữa theo chiều dọc */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translate(-50%, -50%); /* Dịch chuyển để vào đúng giữa */
     display: flex;
+    justify-content: space-between; /* Tạo khoảng cách giữa login và register */
+    gap: 40px; /* Khoảng cách giữa các khối */
+    width: 80%; /* Chiều rộng tổng thể */
+    z-index: 2; /* Đặt trên lớp phủ */
 }
 
-.information .container .infor-left {
-    border-radius: 10px;
-    border: 5px solid var(--color-hover);
-    width: 30%;
-    padding-left: 30px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.information .container .infor-left:hover {
-    box-shadow: 10px 4px 10px rgba(0, 0, 0, 0.25);
-    transition: 0.5s ease;
-    transform: scale(1.05);
-}
-
-.information .container .infor-left form input {
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-.information .container .infor-left form a button {
-    width: 300px;
-    padding: 5px;
-    background-color: black;
-    color: white;
-}
-
-.information .container .infor-left form a button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.information .container .infor-left form a button:hover {
-    background-color: #2980b9;
-}
-
-.information .container .infor-left form p {
-    flex-wrap: wrap
-}
-
-.information .container .infor-right {
-    border-radius: 10px;
-    border: 5px solid var(--color-hover);
+/* Phong cách chung cho login và register */
+.newUser .input .login,
+.newUser .input .register {
+    background: rgba(236, 231, 231, 0.2); /* Hiệu ứng kính mờ */
     padding: 20px;
-    width: 60%;
-    margin-left: 60px;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 10px; /* Bo góc */
+    color: white;
+    box-shadow: 0 7px 6px rgba(5, 3, 1, 6); /* Đổ bóng nhẹ */
 }
 
-.information .container .infor-right:hover {
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-    transition: 0.5s ease;
-    transform: scale(1.05);
-}
-
-.information .container .infor-right h2 {
-    text-align: center;
-}
-
-.infor-right form {
-    max-width: 600px;
-    margin: 0 auto;
-    flex-direction: column;
-    gap: 20px;
-}
-
-
-.infor-right form label {
-    display: inline-block;
+.newUser .input .login {
     width: 30%;
-    text-align: right;
-    margin-right: 10px;
 }
 
-.infor-right form input {
-    width: 60%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.newUser .input .login input {
+    margin: 20px 0;
+}
+
+.newUser .input .register {
+    width: 50%;
+}
+
+
+/* Tiêu đề */
+.newUser .input .login h2,
+.newUser .input .register h2 {
+    text-align: center;
+    font-size: 24px;
     margin-bottom: 20px;
+    color: white;
 }
 
-.infor-right form a {
-    display: flex;
-    justify-content: center;
+/* Input và nút */
+.newUser .input form input,
+.newUser .input form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.newUser .input form input {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.newUser .input form button {
+    background: #007BFF;
+    color: black;
+    cursor: pointer;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Link và checkbox */
+.newUser .input form a {
+    color: white;
+    font-size: 14px;
     text-decoration: none;
 }
 
-.infor-right form button {
-    width: 360px;
-    margin-top: 10px;
-    margin-left: 150px;
-    padding: 10px 20px;
-    background-color: #3498db;
+.newUser .input form label {
+    font-size: 20px;
     color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+    font-weight: bold;
 }
 
-.infor-right form button:hover {
-    background-color: #2980b9;
-}
-
-.notification {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border: 2px solid #3498db;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    display: none; /* Ẩn mặc định */
-    z-index: 1000;
-  }
-  
-  .notification button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .notification button:hover {
-    background-color: #2980b9;
-  }
-  
-
-@media (max-width: 991px) {
-    .information .container {
-        flex-direction: column;
-    }
-
-    .information .container .infor-left,
-    .information .container .infor-right {
-        width: 100%;
-        margin: 0;
-    }
-
-    .infor-right form button {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .infor-right form label {
-        width: 40%;
-        text-align: left;
-        margin-bottom: 10px;
-    }
-
-    .infor-right form input {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-}
-
-
-@media (max-width: 767px) {
-    .information {
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-
-    .information .container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .information .container .infor-left,
-    .information .container .infor-right {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .infor-right form label {
-        width: 100%;
-        text-align: left;
-        margin-bottom: 5px;
-    }
-
-    .infor-right form input {
-        width: 100%;
-    }
-
-    .infor-right form button {
-        width: 100%;
-        margin-left: 0;
-    }
+.newUser .input form .chk {
+    width: 40px;
 }
