@@ -1,109 +1,145 @@
-/* Căn chỉnh container chính */
-.newUser {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Đặt chiều cao 100% màn hình */
-    overflow: hidden;
+/* Đặt CSS cơ bản cho phần login */
+.login {
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-/* Lớp phủ và ảnh nền */
-.newUser .overlay {
-    position: absolute;
+.login .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.login .inner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 40px;
+}
+
+.login-left {
+    width: 30%;
+}
+
+.login-left, .login-right {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-left h2, .login-right h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.login-left p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-left form input,
+.login-right input,
+.login-right select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-left form button,
+.login-right button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-left form button:hover,
+.login-right button:hover {
+    background-color: #0056b3;
+}
+
+.login-right select {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.login-left a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-left a:hover {
+    text-decoration: underline;
+}
+
+.login .container .inner .login-right form .chk {
+    width: 20px;
+}
+
+/* CSS cho notification box */
+#notification {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    z-index: 1000;
+}
+
+#notificationText {
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+#notificationButton {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#notificationButton:hover {
+    background-color: #0056b3;
+}
+
+/* CSS làm mờ nền khi hiển thị notification */
+#notificationBackground {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Màu tối với độ trong suốt */
-    z-index: 1;
-}
-
-.newUser .overlay img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Đảm bảo ảnh phủ toàn màn hình */
-}
-
-/* Phần nội dung (input) */
-.newUser .input {
-    position: absolute;
-    top: 46%; /* Căn giữa theo chiều dọc */
-    left: 50%; /* Căn giữa theo chiều ngang */
-    transform: translate(-50%, -50%); /* Dịch chuyển để vào đúng giữa */
-    display: flex;
-    justify-content: space-between; /* Tạo khoảng cách giữa login và register */
-    gap: 40px; /* Khoảng cách giữa các khối */
-    width: 80%; /* Chiều rộng tổng thể */
-    z-index: 2; /* Đặt trên lớp phủ */
-}
-
-/* Phong cách chung cho login và register */
-.newUser .input .login,
-.newUser .input .register {
-    background: rgba(236, 231, 231, 0.2); /* Hiệu ứng kính mờ */
-    padding: 20px;
-    border-radius: 10px; /* Bo góc */
-    color: white;
-    box-shadow: 0 7px 6px rgba(5, 3, 1, 6); /* Đổ bóng nhẹ */
-}
-
-.newUser .input .login {
-    width: 30%;
-}
-
-.newUser .input .login input {
-    margin: 20px 0;
-}
-
-.newUser .input .register {
-    width: 50%;
-}
-
-
-/* Tiêu đề */
-.newUser .input .login h2,
-.newUser .input .register h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-/* Input và nút */
-.newUser .input form input,
-.newUser .input form button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-}
-
-.newUser .input form input {
-    background: rgba(255, 255, 255, 0.6);
-}
-
-.newUser .input form button {
-    background: #007BFF;
-    color: black;
-    cursor: pointer;
-    margin-top: 30px;
-    font-weight: bold;
-}
-
-/* Link và checkbox */
-.newUser .input form a {
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-.newUser .input form label {
-    font-size: 20px;
-    color: white;
-    font-weight: bold;
-}
-
-.newUser .input form .chk {
-    width: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 }
