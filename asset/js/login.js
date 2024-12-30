@@ -1,9 +1,21 @@
-document.getElementById('loginForm').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const username = document.getElementById('loginUsername').value;
-    const password = document.getElementById('loginPassword').value;
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
 
-    if (username && password) {
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+
+document.querySelector('.sign-in form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const email = document.querySelector('.sign-in form input[type="email"]').value;
+    const password = document.querySelector('.sign-in form input[type="password"]').value;
+
+    if (email && password) {
         showNotification('Đăng nhập thành công!', 'Đi đến trang chủ', function () {
             window.location.href = '../index.html';
         });
@@ -12,22 +24,17 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     }
 });
 
-document.getElementById('registerForm').addEventListener('submit', function (event) {
+document.querySelector('.sign-up form').addEventListener('submit', function (event) {
     event.preventDefault();
-    const fullName = document.getElementById('fullName').value;
-    const address = document.getElementById('address').value;
-    const phoneNumber = document.getElementById('PhoneNumber').value;
-    const password = document.getElementById('Password').value;
-    const agree = document.getElementById('agree').checked;
+    const fullName = document.querySelector('.sign-up form input[placeholder="Họ tên"]').value;
+    const email = document.querySelector('.sign-up form input[type="email"]').value;
+    const password = document.querySelector('.sign-up form input[type="password"]').value;
+    const phoneNumber = document.querySelector('.sign-up form input[placeholder="Số điện thoại"]').value;
+    const address = document.querySelector('.sign-up form input[placeholder="Địa chỉ"]').value;
 
-    if (!agree) {
-        showNotification('Bạn chưa đồng ý với các điều khoản!', 'OK');
-        return;
-    }
-
-    if (fullName && address && phoneNumber && password) {
+    if (fullName && email && password && phoneNumber && address) {
         showNotification('Bạn đã đăng ký thành công, vui lòng đăng nhập!', 'OK', function () {
-            document.getElementById('loginUsername').focus();
+            container.classList.remove("active");
         });
     } else {
         showNotification('Vui lòng nhập đầy đủ thông tin đăng ký!', 'OK');

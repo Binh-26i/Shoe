@@ -52,35 +52,44 @@
     </header>
 
     <!-- Login Section -->
-    <section class="login">
-        <div class="container">
-            <div class="inner">
-                <div class="login-left">
-                    <h2>Tài khoản</h2>
-                    <p>Đăng nhập tài khoản ở đây</p>
-                    <form id="loginForm">
-                        <input id="loginUsername" type="text" placeholder="Tên tài khoản" required> <br>
-                        <input id="loginPassword" type="password" placeholder="Mật khẩu" required> <br>
-                        <button type="submit">Đăng nhập</button>
-                    </form>
-                    <p>If you forgot your password just enter your email and click <a href="">here</a> </p>
+    <section class="login" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Tạo tài khoản</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
-                <div class="login-right">
-                    <h2>Đăng ký tài khoản mới</h2>
-                    <form id="registerForm">
-                        <input id="fullName" type="text" placeholder="Full Name" required> <br>
-                        <input id="address" type="text" placeholder="Địa chỉ" required> <br>
-                        <select name="country" id="country">
-                            <option value="vn">Việt Nam</option>
-                            <option value="cu">Cuba</option>
-                            <option value="la">Lào</option>
-                            <option value="ru">Nga</option>
-                        </select> <br>
-                        <input id="PhoneNumber" type="number" placeholder="Số điện thoại" required> <br>
-                        <input id="Password" type="password" placeholder="Mật khẩu" required> <br>
-                        <input id="agree" type="checkbox" class="chk"> Đồng ý với điều khoản <br>
-                        <button type="submit">Đăng ký tài khoản</button>
-                    </form>
+                <input type="text" placeholder="Họ tên">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Mật khẩu">
+                <input type="number" placeholder="Số điện thoại">
+                <input type="tel" placeholder="Địa chỉ">
+                <button href="../index.html">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Đăng nhập</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Forget Your Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Welcome Back!</h1>
+                    <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Hello, Friend!</h1>
+                    <button class="hidden" id="register" href="../index.html">Sign Up</button>
                 </div>
             </div>
         </div>
@@ -92,6 +101,7 @@
         <div id="notificationText"></div>
         <button id="notificationButton">OK</button>
     </div>
+
 
     <script src="../asset/js/login.js"></script>
 
@@ -137,7 +147,7 @@
 
             <div class="list-1 infor-four">
                 <p>Đăng ký nhận thông tin</p>
-                <p>Gửi email đăng ký để nhận thông báo mới nhất về khuyến mãi, 
+                <p>Gửi email đăng ký để nhận thông báo mới nhất về khuyến mãi,
                     sự kiện nổi bật dành cho khách hàng.
                 </p>
                 <form action="">
